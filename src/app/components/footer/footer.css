@@ -1,0 +1,11 @@
+.footer-img {
+    @apply rounded-lg;
+}
+
+.btn-facebook {
+    @apply border-2 rounded-lg
+}
+
+.btn-instagram {
+    @apply bg-white rounded-lg rounded-lg
+}
