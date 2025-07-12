@@ -1,161 +1,141 @@
 "use client";
 
-import './footer.css'
-import Image from "next/image"
-import Link from "next/link"
-import React from "react";
+import { NAV_LINKS } from "@/constants";
+import Image from "next/image";
+import Link from "next/link";
 import { FaLocationDot } from "react-icons/fa6";
 import { IoMdCall, IoMdMail } from "react-icons/io";
 
-interface ProductType {
-    id: number;
-    section: string;
-    link: string[]
-}
-interface ContactData {
-    id: number;
-    content: Array<{ description: string, icon: React.ReactElement }>;
-}
+const serviceLinks = [
+  { label: "Online Consultation", href: "/services/onlineConsultation" },
+  { label: "Panchakarma Treatment", href: "/services/panchakarmaTreatment" },
+  { label: "Garbh Sanskar", href: "/services/garbhSanskar" },
+  { label: "Herbal Remedies", href: "/services/herbalRemedies" },
+];
 
-const products: ProductType[] = [
-    {
-        id: 1,
-        section: 'Quick Links',
-        link: ['Home', 'About', 'Services']
-    },
-    {
-        id: 2,
-        section: 'Quick Links',
-        link: ['Products', 'Team', 'Blogs']
-    }
-]
-
-const contactData: ContactData[] = [
-    {
-        id: 1,
-        content: [{
-            description: 'Vednath ayurveda & panchkarm hospital Shop no 7-8 Devi plaza 3rd floor , Anand mahal road ,Opp. Shree ram petrol pump, Adajan- Surat -395009',
-            icon: <FaLocationDot
-                size={15}
-            />
-        }]
-    },
-    {
-        id: 2,
-        content: [{
-            description: '+91 8799447243',
-            icon: <IoMdCall
-                size={16}
-            />
-        }]
-    },
-    {
-        id: 3,
-        content: [{
-            description: 'vednathayurved@gmail.com',
-            icon: <IoMdMail
-                size={16}
-            />
-        }]
-    }
-]
-
-const Footer = () => {
-    return (
-        <footer className="bg-primary mt-20">
-            <div className="mx-auto max-w-4xl py-8 px-4 sm:px-6 lg:max-w-7xl lg:px-8">
-                <div className="my-12 grid grid-cols-1 gap-y-10 gap-x-16 sm:grid-cols-6 lg:grid-cols-12">
-
-                    <div className="lg:col-span-4 md:col-span-3 sm:col-span-3">
-                        <Image
-                            className="footer-img"
-                            alt="image-footer"
-                            src={"/footer/footer-img.png"}
-                            width={350} height={350}
-                        />
-                    </div>
-
-                    <div className="lg:col-span-3 md:col-span-2 sm:col-span-3 
-                    flex lg:flex-col md:flex-col sm:flex-col xs:flex-row xs:justify-between">
-                        <div>
-                            <p className="text-white font-semibold text-lg">Quick Links</p>
-                            <div className="flex items-center gap-x-20 mt-3">
-                                {products.map((product) => (
-                                    <div key={product.id}>
-                                        <ul>
-                                            {product.link.map((link: string, index: number) => (
-                                                <li className="mb-2.5" key={index}>
-                                                    <Link className="text-white text-md" href={"/"}>
-                                                        {link}
-                                                    </Link>
-                                                </li>
-                                            ))}
-                                        </ul>
-                                    </div>
-                                ))}
-                            </div>
-                        </div>
-
-                        <div>
-                            <p className="text-white font-semibold text-md mt-4 xs:mt-0">Get in touch</p>
-                            <div className="flex items-center gap-4 mt-3">
-                                <Image src="/footer/facebook.png" alt="logo" width={30} height={30}
-                                    className='btn-facebook'
-                                />
-                                <Image src="/footer/instagram.png" alt="logo" width={30} height={30}
-                                    className='btn-instagram'
-                                />
-                            </div>
-                        </div>
-                    </div>
-
-                    <div className="lg:col-span-5 md:col-span-5 sm:col-span-6">
-                        <div className="sm:col-span-6 lg:col-span-4">
-                            <div className="flex flex-shrink-0 items-center">
-                                <Image src="/footer/ayurveda.png" alt="logo" width={40} height={40} />
-                                <Link href={"/"} className="text-white ml-4 font-semibold mt-2">Vednath Ayurved</Link>
-                            </div>
-                        </div>
-
-                        <div className="flex flex-col gap-3 mt-5 ml-1">
-                            {contactData?.map((contact) => (
-                                <div key={contact?.id} className="flex items-center gap-12">
-                                    {contact?.content?.map((subItem, index) => (
-                                        <div key={index} className="flex items-center gap-3">
-                                            <button
-                                                className="flex p-2 items-center place-self-start justify-center rounded-full
-transition duration-300 ease-in-out bg-white hover:bg-hover hover:text-primary align-top"
-                                            >
-                                                {subItem?.icon}
-                                            </button>
-
-                                            <Link
-                                                href={`https://www.google.com/maps?q=${21.1702},${72.8311}`}
-                                                target="_blank"
-                                                className="text-white text-sm leading-6"
-                                            >
-                                                {subItem?.description}
-                                            </Link>
-                                        </div>
-                                    ))}
-                                </div>
-                            ))}
-                        </div>
-
-                    </div>
-
-                    <div className="fixed bottom-2 left-2 p-2 bg-gray-800 text-white text-sm">
-                        <span className="sm:hidden">Default (XS)</span>
-                        <span className="hidden sm:block md:hidden">sm (≥640px)</span>
-                        <span className="hidden md:block lg:hidden">md (≥768px)</span>
-                        <span className="hidden lg:block xl:hidden">lg (≥1024px)</span>
-                        <span className="hidden xl:block 2xl:hidden">xl (≥1280px)</span>
-                        <span className="hidden 2xl:block">2xl (≥1536px)</span>
-                    </div>
-                </div>
+export default function Footer() {
+  return (
+    <footer className="bg-primary text-white mt-20">
+      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-12">
+        {/* 1️⃣  Grid  layout switches at break‑points */}
+        <div
+          className="   grid gap-10
+    grid-cols-1
+    sm:grid-cols-2
+    md:grid-cols-[1.5fr_0.75fr_0.75fr]
+    md:auto-rows-auto
+    lg:grid-cols-[1.5fr_0.75fr_0.75fr_1fr]"
+        >
+          {/* ── Column 1 ── */}
+          <div className="md:col-span-1 lg:col-span-1 flex justify-center lg:justify-end w-full">
+            <div className="w-full max-w-[400px]">
+              <Image
+                src="/footer/footer-img.png"
+                alt="footer-logo"
+                width={400}
+                height={400}
+                className="w-full h-auto object-cover rounded-2xl"
+              />
             </div>
-        </footer>
-    )
-}
+          </div>
 
-export default Footer
+          {/* ── Column 2 (Quick Links) ── */}
+          <div className="md:col-span-1 lg:col-span-1">
+            <h3 className="text-lg font-semibold mb-4">Quick Links</h3>
+            <ul className="space-y-2">
+              {NAV_LINKS.filter((link) => link.label !== "Services").map(
+                (link) => (
+                  <li key={link.key}>
+                    <Link
+                      href={link.href}
+                      className="hover:text-hover transition"
+                    >
+                      {link.label}
+                    </Link>
+                  </li>
+                )
+              )}
+            </ul>
+          </div>
+
+          {/* ── Column 3 (Services + Social) ── */}
+          <div className="md:col-span-1 lg:col-span-1">
+            <h3 className="text-lg font-semibold mb-4">Our Services</h3>
+            <ul className="space-y-2 mb-6">
+              {serviceLinks.map((link, index) => (
+                <li key={index}>
+                  <Link
+                    href={link.href}
+                    className="hover:text-hover transition"
+                  >
+                    {link.label}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+
+            <h3 className="text-lg font-semibold mb-3">Get in touch</h3>
+            <div className="flex gap-4">
+              <Image
+                src="/footer/facebook.png"
+                alt="facebook"
+                width={30}
+                height={30}
+              />
+              <Image
+                src="/footer/instagram.png"
+                alt="instagram"
+                width={30}
+                height={30}
+              />
+            </div>
+          </div>
+
+          {/* ── Column 4 (Contact Info) ── */}
+          <div className="md:col-span-3 lg:col-span-1">
+            <div className="flex items-center mb-4">
+              <Image
+                src="/footer/ayurveda.png"
+                alt="logo"
+                width={40}
+                height={40}
+              />
+              <Link href="/" className="ml-3 font-semibold text-lg">
+                Vednath Ayurved
+              </Link>
+            </div>
+
+            <div className="space-y-4 mt-4">
+              <div className="flex items-start gap-3">
+                <span className="bg-white text-primary p-2 rounded-full">
+                  <FaLocationDot size={16} />
+                </span>
+                <Link
+                  href="https://www.google.com/maps?q=21.1702,72.8311"
+                  target="_blank"
+                  className="text-sm leading-6"
+                >
+                  Vednath ayurveda & panchkarm hospital, Shop no 7-8 Devi plaza
+                  3rd floor, Anand mahal road, Opp. Shree ram petrol pump,
+                  Adajan- Surat -395009
+                </Link>
+              </div>
+              <div className="flex items-center gap-3">
+                <span className="bg-white text-primary p-2 rounded-full">
+                  <IoMdCall size={16} />
+                </span>
+                <span className="text-sm">+91 8799447243</span>
+              </div>
+              <div className="flex items-center gap-3">
+                <span className="bg-white text-primary p-2 rounded-full">
+                  <IoMdMail size={16} />
+                </span>
+                <span className="text-sm">vednathayurved@gmail.com</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+  );
+}
