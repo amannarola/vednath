@@ -20,7 +20,7 @@ const services = [
   {
     title: "Garbh Sanskar",
     description:
-      "Garbh Sanskar supports the well-being of both mother and child using Ayurvedic principles.",
+      "Garbh Sanskar supports the well-being of both mother and child using Ayurvedic principles. Pre planning pregnancy and Post pregnancy",
     image: "/services/3.jpeg",
     href: "/services/garbhSanskar",
   },

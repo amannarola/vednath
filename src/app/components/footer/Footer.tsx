@@ -76,18 +76,22 @@ export default function Footer() {
 
             <h3 className="text-lg font-semibold mb-3">Get in touch</h3>
             <div className="flex gap-4">
-              <Image
-                src="/footer/facebook.png"
-                alt="facebook"
-                width={30}
-                height={30}
-              />
-              <Image
-                src="/footer/instagram.png"
-                alt="instagram"
-                width={30}
-                height={30}
-              />
+              <Link href="https://www.facebook.com/share/19oH9JzTmN/">
+                <Image
+                  src="/footer/facebook.png"
+                  alt="facebook"
+                  width={30}
+                  height={30}
+                />
+              </Link>
+              <Link href="https://www.instagram.com/vednathayurved?utm_source=qr&igsh=MWgxeHRmaWpnd3pqMw==">
+                <Image
+                  src="/footer/instagram.png"
+                  alt="instagram"
+                  width={30}
+                  height={30}
+                />
+              </Link>
             </div>
           </div>
 
@@ -111,7 +115,7 @@ export default function Footer() {
                   <FaLocationDot size={16} />
                 </span>
                 <Link
-                  href="https://www.google.com/maps?q=21.1702,72.8311"
+                  href="https://maps.app.goo.gl/X1JmmZFWkUDVWXL87?g_st=aw"
                   target="_blank"
                   className="text-sm leading-6"
                 >
@@ -124,7 +128,7 @@ export default function Footer() {
                 <span className="bg-white text-primary p-2 rounded-full">
                   <IoMdCall size={16} />
                 </span>
-                <span className="text-sm">+91 8799447243</span>
+                <span className="text-sm">+91 99256 04218</span>
               </div>
               <div className="flex items-center gap-3">
                 <span className="bg-white text-primary p-2 rounded-full">

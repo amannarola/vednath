@@ -14,6 +14,9 @@ import {
 } from "react-icons/fa";
 import Image from "next/image";
 import TopPage from "@/app/components/topPage";
+import { IoMdCall } from "react-icons/io";
+import { IoCall, IoCallSharp } from "react-icons/io5";
+import Link from "next/link";
 
 const steps = [
   {
@@ -165,10 +168,13 @@ export default function InPersonConsultation() {
             Feel free to reach out to our <strong>Health Coaches</strong> for
             help with booking or consultation details.
           </p>
-          <button className="bg-primary text-white font-medium px-6 py-3 rounded-full inline-flex items-center transition-all duration-300 ease-in-out hover:bg-transparent hover:text-white hover:border hover:border-white">
-            Contact Support
-            <FaArrowRight className="ml-2 w-4 h-4" />
-          </button>
+          <Link href="/contactUs">
+            <button
+              className="bg-primary text-white font-medium px-6 py-3 rounded-full inline-flex items-center transition-all duration-300 ease-in-out hover:bg-transparent hover:text-white hover:border hover:border-white">
+              Contact Support
+              <FaArrowRight className="ml-2 w-4 h-4" />
+            </button>
+          </Link>
         </div>
       </motion.section>
 
@@ -180,15 +186,15 @@ export default function InPersonConsultation() {
               <h3 className="text-lg lg:text-xl font-semibold mb-2 text-green-900">
                 Message Us
               </h3>
-              <p className="text-sm  flex items-center gap-2 mb-1 text-gray-700 break-all">
+              <p className="text-sm  flex items-center gap-2 mb-2 text-gray-700 break-all">
                 <FaEnvelope className="text-green-600 flex-shrink-0" />
                 vednathayurved@gmail.com
               </p>
-              <p className="text-sm  flex items-center gap-2 mb-1 text-gray-700">
-                <FaPhone className="text-green-600" /> +91 9016166757 (Online)
+              <p className="text-sm  flex items-center gap-2 mb-2 text-gray-700">
+                <IoCall className="text-green-600" /> +91 99256 04218 (Online)
               </p>
               <p className="text-sm flex items-center gap-2 text-gray-700">
-                <FaPhone className="text-green-600" /> +91 81409 46153
+                <IoCall className="text-green-600" /> +91 87994 47243
                 (Hospital)
               </p>
             </div>
@@ -198,9 +204,22 @@ export default function InPersonConsultation() {
                 Follow Us
               </h3>
               <div className="flex gap-4 text-lg text-green-700">
-                <FaFacebookF className="hover:text-green-900 hover:scale-110 transition-all cursor-pointer" />
-                <FaInstagram className="hover:text-green-900 hover:scale-110 transition-all cursor-pointer" />
-                <FaYoutube className="hover:text-green-900 hover:scale-110 transition-all cursor-pointer" />
+                <a
+                  href="https://www.facebook.com/share/19oH9JzTmN/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="hover:text-green-900 hover:scale-110 transition-all cursor-pointer"
+                >
+                  <FaFacebookF className="hover:text-green-900 hover:scale-110 transition-all cursor-pointer" />
+                </a>
+                <a
+                  href="https://www.instagram.com/vednathayurved?utm_source=qr&igsh=MWgxeHRmaWpnd3pqMw=="
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="hover:text-green-900 hover:scale-110 transition-all cursor-pointer"
+                >
+                  <FaInstagram className="hover:text-green-900 hover:scale-110 transition-all cursor-pointer" />
+                </a>
               </div>
             </div>
           </div>
@@ -213,27 +232,30 @@ export default function InPersonConsultation() {
             <p className="text-sm lg:text-base font-medium text-green-700">
               Hospital
             </p>
-            <p className="text-sm lg:text-base mb-2 text-gray-700">
-              Monday–Sunday: <strong>7:30 AM – 9:00 PM</strong>
+            <p className="text-sm lg:text-base text-gray-700">
+              Monday–Saturday
+            </p>
+            <p className="text-sm lg:text-base mb-4 text-gray-700">
+              <strong>10:00 AM – 7:00 PM</strong>
             </p>
             <p className="text-sm lg:text-base font-medium text-green-700">
               Online Consultation
             </p>
             <p className="text-sm lg:text-base text-gray-700">
-              Mon–Sat: <strong>8:00 AM – 8:00 PM</strong>
+              Monday–Saturday
             </p>
-            <p className="text-sm lg:text-base text-gray-700">
-              Sunday: <strong>9:30 AM – 6:00 PM</strong>
+            <p className="text-sm lg:text-base mb-2 text-gray-700">
+              <strong>10:00 AM – 6:00 PM</strong>
             </p>
           </div>
 
           {/* Column 3: Map */}
-          <div className="lg:col-span-6 bg-white rounded-2xl p-6 lg:p-8 shadow-md hover:shadow-xl transition-transform duration-300 hover:-translate-y-1">
-            <h3 className="text-lg lg:text-xl font-semibold mb-2 text-green-900">
-              Our Locations
+          <div className="lg:col-span-6 bg-white rounded-2xl p-2 lg:p-2 shadow-md hover:shadow-xl transition-transform duration-300 hover:-translate-y-1">
+            <h3 className="text-lg lg:text-xl font-semibold mb-2 text-green-900 px-3 pt-2">
+              Our Location
             </h3>
             <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3709.1505581274525!2d72.82930007521088!3d21.20371998190248!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be04f86d2b63e43%3A0x4c7e96f9e95d62f6!2sJOGI%20Ayurved%20Multispeciality%20Hospital!5e0!3m2!1sen!2sin!4v1720428507039!5m2!1sen!2sin"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3718.34876820506!2d72.7946281750504!3d21.18760818257251!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2f6765c68eacde63%3A0x1e88186830564726!2sVednath%20Ayurved!5e0!3m2!1sen!2sin!4v1726900000000!5m2!1sen!2sin"
               width="100%"
               height="240"
               className="rounded-md border-none"

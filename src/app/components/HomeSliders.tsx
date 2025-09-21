@@ -25,8 +25,8 @@ const HomeSliders = ({ items }: any) => {
     {
       img: "slider/1.png",
       location: "Ayurved",
-      description: "India’s Trusted Ayurvedic Clinic for Root-Cause Treatments",
-      title: "Vednath",
+      description: "India’s Trusted Ayurvedic Hospital for Root-Cause Treatments",
+      title: "Vednath Ayurved",
     },
     {
       img: "slider/2.png",
@@ -62,7 +62,7 @@ const HomeSliders = ({ items }: any) => {
         <div className="absolute inset-0 z-20 flex items-center justify-center">
           <div className="w-full h-full flex flex-col justify-center lg:grid lg:grid-cols-10 px-4 sm:px-6 md:px-10">
             {/* Left Info */}
-            <div className="lg:col-span-4 flex flex-col justify-center pb-6 lg:pb-0">
+            <div className="lg:col-span-4 flex flex-col justify-center">
               <SlideInfo
                 transitionData={transitionData}
                 currentSlideData={currentSlideData}

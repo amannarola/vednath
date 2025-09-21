@@ -5,6 +5,7 @@ import Footer from "./components/footer/Footer";
 import Services from "./components/services/page";
 import HomeAbout from "./components/about/homeAbout";
 import Dieases from "./components/dieases/Dieases";
+import ScreenDebugger from "./components/ScreenDebugger";
 
 export default async function Home() {
   return (
@@ -13,6 +14,8 @@ export default async function Home() {
       <HomeAbout />
       <Services />
       <Dieases />
+
+      {/* <ScreenDebugger /> */}
     </React.Fragment>
   );
 }

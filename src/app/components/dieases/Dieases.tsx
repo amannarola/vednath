@@ -73,7 +73,7 @@ const diseases = [
   {
     title: "Sexual Problems",
     icon: "⚤",
-    list: ["Erectile Dysfunction", "Oligospermia", "PE", "Varicocele"],
+    list: ["Erectile Dysfunction", "Oligospermia", "Premature Ejaculation", "Varicocele"],
   },
   {
     title: "Joints Pain",

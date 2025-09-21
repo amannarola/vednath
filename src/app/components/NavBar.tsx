@@ -25,10 +25,10 @@ const NavBar = () => {
   };
 
   return (
-    <nav className="flexBetween max-container padding-container relative z-30 py-5">
+    <nav className="flexBetween max-container padding-container sticky top-0 z-50 bg-white relative py-5">
       {/* Logo */}
       <Link href="/">
-        <Image src="/header/logo.png" alt="logo" width={150} height={70} />
+        <Image src="/header/logo.png" alt="logo" width={120} height={60} />
       </Link>
 
       {/* Desktop Nav */}
@@ -48,10 +48,9 @@ const NavBar = () => {
 
               <div
                 className={`absolute left-0 mt-2 w-72 bg-white shadow-lg rounded-lg overflow-hidden transition-all duration-300 origin-top transform
-                  ${
-                    showServices
-                      ? "scale-100 opacity-100 visible"
-                      : "scale-95 opacity-0 invisible"
+                  ${showServices
+                    ? "scale-100 opacity-100 visible"
+                    : "scale-95 opacity-0 invisible"
                   }`}
               >
                 <ul className="text-sm text-black">
@@ -126,16 +125,14 @@ const NavBar = () => {
                 >
                   Services
                   <IoChevronDown
-                    className={`ml-1 transition-transform duration-300 ${
-                      mobileServicesOpen ? "rotate-180" : ""
-                    }`}
+                    className={`ml-1 transition-transform duration-300 ${mobileServicesOpen ? "rotate-180" : ""
+                      }`}
                   />
                 </button>
 
                 <div
-                  className={`overflow-hidden transition-all duration-500 ease-in-out ${
-                    mobileServicesOpen ? "max-h-60 mt-2" : "max-h-0"
-                  }`}
+                  className={`overflow-hidden transition-all duration-500 ease-in-out ${mobileServicesOpen ? "max-h-60 mt-2" : "max-h-0"
+                    }`}
                 >
                   <ul className="ml-4 text-black text-base space-y-1 pt-1">
                     <li>

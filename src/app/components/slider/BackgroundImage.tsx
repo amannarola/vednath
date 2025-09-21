@@ -26,7 +26,7 @@ const BackgroundImage = ({ transitionData, currentSlideData }: Props) => {
         alt="Current Image"
         key={currentSlideData?.data?.img + "transition"}
         src={currentSlideData?.data?.img}
-        className="absolute left-0 top-0 z-10 h-[75vh] lg:h-full w-full object-cover brightness-50"
+        className="absolute left-0 top-0 h-[75vh] lg:h-full w-full object-cover brightness-50"
       />
     </React.Fragment>
   );
