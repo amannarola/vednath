@@ -80,9 +80,7 @@ export default function InPersonConsultation() {
               and customized diet charts.
             </p>
             <p className="text-lg text-gray-700">
-              This isn't just about treating symptoms. It&rsquo;s about empowering you
-              with the knowledge and tools to restore balance, build resilience,
-              and take charge of your long-term health—naturally.
+              {"This isn't just about treating symptoms. It’s about empowering you with the knowledge and tools to restore balance, build resilience, and take charge of your long-term health—naturally."}
             </p>
           </div>
 
