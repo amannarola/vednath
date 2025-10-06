@@ -25,24 +25,24 @@ const Controls = ({
     initData
 }: Props) => {
     const handlePrev = () => {
-        handleData((prevData) => [
+        handleData((prevData: Data[]) => [
             transitionData ? transitionData : initData,
-            ...prevData.slice(0, prevData?.length - 1)
+            ...prevData.slice(0, prevData.length - 1),
         ]);
         handleCurrentSlideData({
             data: transitionData ? transitionData : sliderData[0],
-            index: sliderData?.findIndex((ele) => {
-                ele.img === data[data?.length - 1]?.img
-            })
+            index: sliderData.findIndex(
+                (ele: Data) => ele.img === data[data.length - 1]?.img
+            )
         });
         handleTransitionData(data[data?.length - 1]);
     }
 
     const handleNext = () => {
-        handleData((prev) => prev.slice(1))
+        handleData((prev: Data[]) => prev.slice(1))
         handleCurrentSlideData({
             data: transitionData ? transitionData : initData,
-            index: sliderData.findIndex((ele) => ele?.img === data[0]?.img)
+            index: sliderData.findIndex((ele: Data) => ele?.img === data[0]?.img)
         })
         handleTransitionData(data[0])
         setTimeout(() => {

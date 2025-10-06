@@ -3,7 +3,7 @@
 import { motion } from "framer-motion";
 import Image from "next/image";
 import { FaMapMarkerAlt, FaPhoneAlt } from "react-icons/fa";
-import { FaEnvelope, FaFacebookF, FaInstagram, FaLinkedinIn, FaYoutube } from "react-icons/fa6";
+import { FaEnvelope, FaFacebookF, FaInstagram } from "react-icons/fa6";
 import { useInView } from "react-intersection-observer";
 
 const ContactUs = () => {

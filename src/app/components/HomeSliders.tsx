@@ -6,7 +6,6 @@ import BackgroundImage from "./slider/BackgroundImage";
 import SlideInfo from "./slider/SlideInfo";
 import Slides from "./slider/Slides";
 import Controls from "./slider/Controls";
-import { getSliderData } from "@/lib/contentful/client";
 
 export type Data = {
   img: string;
@@ -20,7 +19,7 @@ export type CurrentSlideData = {
   index: number;
 };
 
-const HomeSliders = ({ items }: any) => {
+const HomeSliders = () => {
   const sliderData = [
     {
       img: "slider/1.png",

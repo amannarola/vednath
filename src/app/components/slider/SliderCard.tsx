@@ -1,7 +1,8 @@
 import { motion } from "framer-motion";
+import { Data } from "../HomeSliders";
 
 type Props = {
-  data: any;
+  data: Data;
 };
 
 const SliderCard = ({ data }: Props) => {
@@ -26,7 +27,7 @@ lg:h-80 md:min-w-[250px]"
       }}
     >
       <motion.img
-        layout={data?.img}
+        // layout={data?.img}
         alt="Transition Image"
         src={data?.img}
         className="absolute w-full h-full rounded-2xl object-cover brightness-75"

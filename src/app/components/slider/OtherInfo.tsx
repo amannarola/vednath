@@ -1,8 +1,9 @@
 import React from 'react'
 import { motion } from 'framer-motion'
+import { Data } from '../HomeSliders'
 
 type Props = {
-    data: any
+    data: Data
 }
 
 const item = {

@@ -4,18 +4,14 @@ import React from "react";
 import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import {
-  FaPhone,
   FaArrowRight,
   FaEnvelope,
   FaFacebookF,
   FaInstagram,
-  FaYoutube,
-  FaMapMarkerAlt,
 } from "react-icons/fa";
 import Image from "next/image";
 import TopPage from "@/app/components/topPage";
-import { IoMdCall } from "react-icons/io";
-import { IoCall, IoCallSharp } from "react-icons/io5";
+import { IoCall } from "react-icons/io5";
 import Link from "next/link";
 
 const steps = [

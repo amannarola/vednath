@@ -2,7 +2,6 @@ import React from "react"
 import { CurrentSlideData, Data } from "../HomeSliders"
 import { motion } from 'framer-motion'
 import OtherInfo from "./OtherInfo"
-import { IoMdBookmark } from "react-icons/io"
 
 type Props = {
     transitionData: Data
