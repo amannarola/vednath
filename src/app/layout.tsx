@@ -4,7 +4,7 @@ import NavBar from "./components/NavBar";
 import Footer from "./components/footer/Footer";
 import WhatsAppButton from "./components/WhatsappButton";
 
-export const metadata = {
+export const metadata: Metadata = {
   title: "Vednath Ayurved",
   description: "Best Ayurvedic treatment and wellness services",
   keywords: ["ayurveda", "health", "herbal"],
